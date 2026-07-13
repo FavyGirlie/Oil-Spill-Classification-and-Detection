@@ -24,7 +24,7 @@ from transformers import (
     Mask2FormerImageProcessor,
 )
 
-HF_REPO_ID = "Efeeloo_Augustus/oil-spill-segformer-mask2former"  
+HF_REPO_ID = "De-FavouredOne/oil-spill-segformer-mask2former"  
 SEGFORMER_FILENAME = "segformer_lados_best.pth"
 MASK2FORMER_FILENAME = "mask2former_lados_best.pth"
 
