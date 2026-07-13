@@ -1,18 +1,3 @@
-"""
-app.py
--------
-Streamlit web app for oil-spill detection & classification.
-
-Upload an aerial/satellite image -> choose a model (SegFormer-B2 or
-Mask2Former) -> see the predicted segmentation mask overlaid on the image,
-plus a class-by-class pixel coverage breakdown.
-
-Run locally:
-    streamlit run app.py
-
-Deploy:
-    Push this repo to GitHub, then deploy on https://share.streamlit.io
-"""
 
 import streamlit as st
 from PIL import Image
