@@ -43,9 +43,9 @@ If you'd rather do it manually:
 ```bash
 pip install huggingface_hub
 huggingface-cli login
-huggingface-cli upload your-username/oil-spill-segformer-mask2former \
+huggingface-cli upload Efeeloo-Augustus/oil-spill-segformer-mask2former \
     segformer_lados_best.pth segformer_lados_best.pth
-huggingface-cli upload your-username/oil-spill-segformer-mask2former \
+huggingface-cli upload Efeeloo-Augustus/oil-spill-segformer-mask2former \
     mask2former_lados_best.pth mask2former_lados_best.pth
 ```
 
@@ -53,7 +53,7 @@ huggingface-cli upload your-username/oil-spill-segformer-mask2former \
 
 Open `model_utils.py` and change:
 ```python
-HF_REPO_ID = "YOUR_HF_USERNAME/oil-spill-segformer-mask2former"
+HF_REPO_ID = "EFEELOO_AUGUSTUS/oil-spill-segformer-mask2former"
 ```
 to your actual Hugging Face repo ID.
 
@@ -70,7 +70,7 @@ and `huggingface_hub` will pick it up automatically from the environment.
 ## Run locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/oil-spill-streamlit.git
+git clone https://github.com/EFEELOO_AUGUSTUS/oil-spill-streamlit.git
 cd oil-spill-streamlit
 pip install -r requirements.txt
 streamlit run app.py
@@ -88,7 +88,7 @@ downloads both checkpoints from Hugging Face Hub (cached afterwards).
    git add .
    git commit -m "Initial commit: oil spill detection Streamlit app"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/oil-spill-streamlit.git
+   git remote add origin https://github.com/EFEELOO_AUGUSTUS/oil-spill-streamlit.git
    git push -u origin main
    ```
 2. Go to **https://share.streamlit.io** and sign in with GitHub.
@@ -99,7 +99,7 @@ downloads both checkpoints from Hugging Face Hub (cached afterwards).
    ```toml
    HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxx"
    ```
-6. Your app will be live at `https://YOUR_USERNAME-oil-spill-streamlit.streamlit.app`
+6. Your app will be live at `https://EFEELOO_AUGUSTUS-oil-spill-streamlit.streamlit.app`
    (or similar) within a minute or two. No need to keep anything running on
    your own machine — Streamlit Cloud hosts it continuously.
 
