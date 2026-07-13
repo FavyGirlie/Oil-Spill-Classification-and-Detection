@@ -24,15 +24,12 @@ from transformers import (
     Mask2FormerImageProcessor,
 )
 
-# ──────────────────────────────────────────────────────────────────────────
-# Config — EDIT THIS to match where you uploaded your checkpoints on HF Hub
-# ──────────────────────────────────────────────────────────────────────────
-HF_REPO_ID = "YOUR_HF_USERNAME/oil-spill-segformer-mask2former"  # <-- change this
+HF_REPO_ID = "Efeeloo_Augustus/oil-spill-segformer-mask2former"  
 SEGFORMER_FILENAME = "segformer_lados_best.pth"
 MASK2FORMER_FILENAME = "mask2former_lados_best.pth"
 
 SEG_CKPT = "nvidia/mit-b2"
-M2F_CKPT = "facebook/mask2former-swin-small-ade-semantic"  # matches training fix
+M2F_CKPT = "facebook/mask2former-swin-small-ade-semantic"  
 
 IMG_SIZE = 512
 
@@ -71,7 +68,7 @@ def load_segformer():
     ckpt_path = _download_checkpoint(SEGFORMER_FILENAME)
     checkpoint = torch.load(ckpt_path, map_location=DEVICE)
 
-    # Strip 'model.' prefix if present (common training-wrapper artefact)
+    
     clean_state_dict = {
         (k[6:] if k.startswith("model.") else k): v for k, v in checkpoint.items()
     }
