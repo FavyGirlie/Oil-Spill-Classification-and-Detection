@@ -15,6 +15,7 @@ import torch
 import torch.nn.functional as F
 from PIL import Image
 from huggingface_hub import hf_hub_download
+import streamlit as st
 from transformers import (
     SegformerConfig,
     SegformerForSemanticSegmentation,
@@ -57,7 +58,8 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def _download_checkpoint(filename: str) -> str:
     """Downloads (and caches) a checkpoint file from the HF Hub. Returns local path."""
-    return hf_hub_download(repo_id=HF_REPO_ID, filename=filename)
+    return hf_hub_download(repo_id=HF_REPO_ID, filename=filename
+                          token=st.secrets.get("HF_TOKEN", None)
 
 
 def load_segformer():
